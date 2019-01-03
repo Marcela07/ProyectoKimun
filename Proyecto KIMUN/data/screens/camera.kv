@@ -1,0 +1,38 @@
+ShowcaseScreen:
+    name: 'Camera'
+    fullscreen: True
+    orientation: 'vertical'
+  
+    BoxLayout:
+        size_hint_y: None
+        size_hint_x: None
+        height: '400dp'
+        spacing: '50dp'
+        padding: '50dp'
+        width: '500dp'
+        
+        Camera:
+            id: camera   
+            resolution: (640, 480)
+            play: False
+                          
+    ToggleButton:
+        text: 'Play'
+        on_press: camera.play = not camera.play
+        size_hint_y: None
+        height: '48dp'
+        spacing: '50dp'
+        
+    Button:
+        text: 'Capturar'
+        size_hint_y: None
+        height: '48dp'
+        spacing: '50dp'
+        on_press: root.capture()
+        
+
+   
+
+        
+
+        
